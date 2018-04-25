@@ -1,0 +1,20 @@
+{
+  "name": "ttis",
+  "version": "1.0.0",
+  "description": "Tiny Test In-Situ",
+  "main": "index.js",
+  "repository": "https://github.com/gisikw/ttis",
+  "author": "Kevin Gisi",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npm run build:dist && npm run build:min",
+    "build:dist": "babel src/ttis.js > dist/ttis.js",
+    "build:min": "cat dist/ttis.js | uglifyjs -c -m > dist/ttis.min.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "uglify-js": "^3.3.22"
+  }
+}
